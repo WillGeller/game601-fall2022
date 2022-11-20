@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x5ba5eb5b48c0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7</generator>
+  <activeNode nodeId="node-0x5ba5eb5b4740"/>
+  <item nodeId="node-0x5ba5eb5b48c0">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">
+
+
+
+Skeleton Ruins
+An Interactive Fiction by Will Geller
+Release 1 / Serial number 221108 / Inform 7 v10.1.2 / D
+
+Classroom
+There are two rows of chairs in the classroom. To the north through the a short hallway is a living room. 
+
+There is a laptop with solitaire on the screen resting on the table. It looks valuable. Surely a gift someone would be happy to receive!
+
+You can see a Portal, a table and a treasure chest (closed) here.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5ba5eb254410"/>
+      <child nodeId="node-0x5ba5eb5b4740"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5ba5eb254410">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5ba5eb5b4740">
+    <command xml:space="preserve">open Portal</command>
+    <result xml:space="preserve">The portal is locked you fool!
+
+It seems to be locked.
+
+There are 20 minutes to escape!
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+</Skein>
