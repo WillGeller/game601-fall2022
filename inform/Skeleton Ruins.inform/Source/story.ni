@@ -13,13 +13,13 @@ This example demonstrates:
 REMEMBER TO PRESS THE "GO!" BUTTON FREQUENTLY!!! YOUR ERRORS/TYPOS WILL PILE UP QUICKLY SO PRETTY MUCH TRY PRESSING THAT BUTTON AND FIXING ERRORS EVERY TIME YOU TRY WRITING SOMETHING!
 ]
 
-"Game 601 11-2-21" by Mike Treanor
+"The Cove" by Will Geller
 
 Release along with the "Quixe" interpreter.
 
 
-The player is in the Classroom.
-
+The player is in The Boat.
+[
 The timeToEscape is a number variable. The timeToEscape is 20.
 
 Every turn:
@@ -29,28 +29,28 @@ Every turn when the player is carrying the golden key:	now the timeToEscape is t
 			
 Every turn when timeToEscape is less than 0:
 	say "You didn't make it to the portal. The curse of the golden key consumes you!";
-	end the story;
+	end the story;]
 	
-Every turn when the player is in the Amusement Park:
-	say "You made it through portal to the Amusement Park, and look! Your friend the Happy Clown has come to join you laptop in hand! THE END.";
+Every turn when the player is in the caverns:
+	say "You made it to the underwater cave, all around you are piles of pirates gold, congrats u rich now. THE END.";
 	end the story;
 
 [ROOMS AND LAYOUT]
 
-The Living Room is a room. 
+The Boat is a room. 
 
-The Classroom is a room.
+The Beach is a room.
 
-The living room is north of the Classroom.
+The Beach room is west of the Boat.
 
-The Amusement Park is a room.
+The Caverns is a room.
 
 The Portal is a locked door. The Portal is west of the Classroom and east of the Amusement Park.
 
 [CLASSROOM]
 
-The description of the Classroom is "There are two rows of chairs in the classroom. To the north through the a short hallway is a living room. [if timeToEscape is less than 8]TIME IS RUNNING OUT![end if]"
-
+The description of the Boat is "You are adrift a ship with no food and no sail, a storm has sent you close to land... to the west is the beach..."
+[
 The table is a fixed in place thing in the Classroom. The table is a supporter. 
 
 The laptop is a thing. "There is a laptop with solitaire on the screen resting on the table. It looks valuable. Surely a gift someone would be happy to receive!". The laptop is on the table.
@@ -104,3 +104,5 @@ Instead of giving the laptop to the Happy Clown:
 
 [TESTS]
 Test win with "take laptop / go north / flip switch / give laptop to happy clown / go south / unlock treasure chest with the golden key / open treasure chest / take Electro Gadget / unlock Portal with Electro Gadget / enter portal /".
+
+]
