@@ -1,38 +1,12 @@
-[
-This example demonstrates:
-	- Creating and connecting rooms
-	- Creating doors (between rooms)
-	- Making it so certain things can unlock locked things such as doors and containers
-	- Overwriting default behavior in order to create dialogue with characters, and transfer items between characters
-	- Create numerical variables
-	- Making a win condition depend upon player location
-	- Making a lose condition based on the value of a variable
-	- Having conditional descriptions based on a variable
-	- Creating test sequences of input to help speed up testing your game
-	
-REMEMBER TO PRESS THE "GO!" BUTTON FREQUENTLY!!! YOUR ERRORS/TYPOS WILL PILE UP QUICKLY SO PRETTY MUCH TRY PRESSING THAT BUTTON AND FIXING ERRORS EVERY TIME YOU TRY WRITING SOMETHING!
-]
-
 "The Cove" by Will Geller
 
 Release along with the "Quixe" interpreter.
 
 
 The player is in The Boat.
-[
-The timeToEscape is a number variable. The timeToEscape is 20.
 
-Every turn:
-	say "There [if timeToEscape is 1]is[else]are[end if] [timeToEscape] minutes to escape!";
-
-Every turn when the player is carrying the golden key:	now the timeToEscape is timeToEscape - 1;
-			
-Every turn when timeToEscape is less than 0:
-	say "You didn't make it to the portal. The curse of the golden key consumes you!";
-	end the story;]
-	
 Every turn when the player is in the caverns:
-	say "You made it to the underwater cave, all around you are piles of pirates gold, congrats u rich now. THE END.";
+	say "You enter the caverns and swim deeper into the depths of the cave. Something compels you to explore further. After a brief swim you enter a new chamber, within the chamber a light illuminates a glowing stash of gems! You take the gems back to shore, now hoping for someone to come by to rescue you. Maybe then your gems will come to be of value!";
 	end the story;
 
 [ROOMS AND LAYOUT]
@@ -41,68 +15,29 @@ The Boat is a room.
 
 The Beach is a room.
 
-The Beach room is west of the Boat.
+The Beach is west of the Boat.
+
+The Chest is a container.
+
+The Chest contains a shovel.
+
+The Chest is in the Beach.
 
 The Caverns is a room.
 
-The Portal is a locked door. The Portal is west of the Classroom and east of the Amusement Park.
+The Cave Entrance is a locked door. The Cave Entrance is west of the Beach and east of the Caverns.
+
+The Shovel unlocks the Cave Entrance.
 
 [CLASSROOM]
 
 The description of the Boat is "You are adrift a ship with no food and no sail, a storm has sent you close to land... to the west is the beach..."
-[
-The table is a fixed in place thing in the Classroom. The table is a supporter. 
 
-The laptop is a thing. "There is a laptop with solitaire on the screen resting on the table. It looks valuable. Surely a gift someone would be happy to receive!". The laptop is on the table.
+[Beach]
 
-The treasure chest is a locked container in the Classroom.
-
-The Electro Gadget is a thing. It is inside the treasure chest. It unlocks the portal.
-
-[LIVING ROOM]
-
-The living room is dark.
-
-Every turn when the living room is dark and the player is in the living room:
-		say "You see a faint glow coming form a light switch.".
-
-The description of the Living Room is "There is a comfy sofa set in front of the television. To the south is a classroom."
-
-The golden key is a thing. The golden key unlocks the treasure chest. The Happy Clown is holding the golden key.
-
-Before opening the Portal when the portal is locked:
-	say "The portal is locked you fool!";
-	
-[LIVING ROOM - LIGHT SWITCH]
-The light switch is a switched off device in the living room. It is fixed in place.
-
-Carry out switching off the light switch: 
-	now the living room is dark.
-
-Carry out switching on the light switch: 
-	now the living room is lighted.
-	
-After deciding the scope of the player when the location is the living room:
-    place the light switch in scope.
-	
-Understand "flip [something switched off]" as switching on. Understand "flip [something switched on]" as switching off. Understand "flip [something]" as switching on.
-
-[LIVING ROOM - HAPPY CLOWN]
-The Happy Clown is a person in the living room. "There is a Happy Clown standing in the corner of the room staring at you. A golden key is dangling from its brightly colored belt.".
-
-Instead of asking the Happy Clown for the golden key when the happy clown is not carrying the laptop:
-		say "The Happy Clown stares at you without blinking. Perhaps a technological gift would encourage them to give you the key...";
-
-Instead of giving the laptop to the Happy Clown:
-		say "The Happy Clown reaches out to you screaming while making no noise! You hand the clown the laptop and it tosses the key to you.";
-		say "You also suddenly remember the portal in the classroom. Quick! Use the key to unlock the portal and escape!";
-		now the timeToEscape is 8;
-		now the happy clown is carrying the laptop;
-		now the player is carrying the golden key.
-
+The description of the Beach is "Finally, you have made it to shore. As your feet hit the sand you feel a sense of relief. Out of the corner of your eye you spot a chest. Further inland you see a Cavern Entrance but it is blocked by rocks."
 
 
 [TESTS]
-Test win with "take laptop / go north / flip switch / give laptop to happy clown / go south / unlock treasure chest with the golden key / open treasure chest / take Electro Gadget / unlock Portal with Electro Gadget / enter portal /".
+Test win with "go west / take shovel / open Cave Entrance with shovel / go west".
 
-]

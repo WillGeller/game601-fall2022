@@ -10,7 +10,7 @@
 
 The Cove
 An Interactive Fiction by Will Geller
-Release 1 / Serial number 221123 / Inform 7 v10.1.2 / D
+Release 1 / Serial number 221125 / Inform 7 v10.1.2 / D
 
 The Boat
 You are adrift a ship with no food and no sail, a storm has sent you close to land... to the west is the beach...
@@ -25,6 +25,7 @@ You are adrift a ship with no food and no sail, a storm has sent you close to la
       <child nodeId="node-0x5b5d12e9ea00"/>
       <child nodeId="node-0x5b5d119af340"/>
       <child nodeId="node-0x5b5d119822e0"/>
+      <child nodeId="node-0x5b5d119afc40"/>
     </children>
   </item>
   <item nodeId="node-0x5b5d12e9ea00">
@@ -597,11 +598,12 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
       <child nodeId="node-0x5b5d134aaf00"/>
+      <child nodeId="node-0x5b5d11982ee0"/>
     </children>
   </item>
   <item nodeId="node-0x5b5d134aaf00">
@@ -616,12 +618,537 @@ You are adrift a ship with no food and no sail, a storm has sent you close to la
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x5b5d119822e0">
+  <item nodeId="node-0x5b5d11982ee0">
     <command xml:space="preserve">go west</command>
     <result xml:space="preserve">
 Beach room
 
 &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d119822e0">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">
+Beach
+Finally, you have made it to shore. As your feet hit the sand you feel a sense of relief. Out of the corner of your eye you spot a chest. Further inland you see a Cavern Entrance but it is blocked by rocks.
+
+You can see a Cavern Entrance and a Chest (in which is a shovel) here.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d11982be0"/>
+      <child nodeId="node-0x5b5d11982a60"/>
+      <child nodeId="node-0x5b5d11982760"/>
+      <child nodeId="node-0x5b5d119af940"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d11982be0">
+    <command xml:space="preserve">open chest</command>
+    <result xml:space="preserve">It isn&apos;t something you can open.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d119825e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d119825e0">
+    <command xml:space="preserve">take key</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d11982a60">
+    <command xml:space="preserve">open Cave</command>
+    <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d11982760">
+    <command xml:space="preserve">take key from chest</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d119afac0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d119afac0">
+    <command xml:space="preserve">open cavern entrance</command>
+    <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d119aff40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d119aff40">
+    <command xml:space="preserve">unlock cavern entrance</command>
+    <result xml:space="preserve">(with the key)
+That doesn&apos;t seem to fit the lock.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d119af940">
+    <command xml:space="preserve">take shovel</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d134aad80"/>
+      <child nodeId="node-0x5b5d1398b1a0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d134aad80">
+    <command xml:space="preserve">open cavern entrance</command>
+    <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d137a84c0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d137a84c0">
+    <command xml:space="preserve">open cavern entrance with shovel</command>
+    <result xml:space="preserve">You unlock the Cavern Entrance.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d137a8940"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d137a8940">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening the Cavern Entrance)
+
+Caverns
+You can see a Cavern Entrance here.
+
+You made it to the underwater cave, all around you are piles of pirates gold, congrats u rich now. THE END.
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d1398b1a0">
+    <command xml:space="preserve">open caverns</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d1398b4a0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d1398b4a0">
+    <command xml:space="preserve">open caverns entrance with shovel</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x5b5d119afc40">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">&gt;--&gt; The following tests are available:
+&apos;test win&apos;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d1398b7a0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d1398b7a0">
+    <command xml:space="preserve">test win</command>
+    <result xml:space="preserve">(Testing.)
+
+&gt;[1] go west
+
+Beach
+Finally, you have made it to shore. As your feet hit the sand you feel a sense of relief. Out of the corner of your eye you spot a chest. Further inland you see a Cavern Entrance but it is blocked by rocks.
+
+You can see a Cave Entrance and a Chest (in which is a shovel) here.
+
+&gt;[2] take shovel
+Taken.
+
+&gt;[3] open cave entrance with shovel
+You unlock the Cave Entrance.
+
+&gt;[4] go west
+(first opening the Cave Entrance)
+
+Caverns
+You can see a Cave Entrance here.
+
+You enter the caverns and swim deeper into the depths of the cave. Something compels you to explore further. After a brief swim you enter a new chamber, within the chamber a light illuminates a glowing stash of gems! You take the gems back to shore, now hoping for someone to come by to rescue you. Maybe then your gems will come to be of value!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d119afdc0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d119afdc0">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">
+
+
+
+The Cove
+An Interactive Fiction by Will Geller
+Release 1 / Serial number 221125 / Inform 7 v10.1.2 / D
+
+The Boat
+You are adrift a ship with no food and no sail, a storm has sent you close to land... to the west is the beach...
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d1398baa0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d1398baa0">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">
+Beach
+Finally, you have made it to shore. As your feet hit the sand you feel a sense of relief. Out of the corner of your eye you spot a chest. Further inland you see a Cavern Entrance but it is blocked by rocks.
+
+You can see a Cave Entrance and a Chest (in which is a shovel) here.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d1398bf20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d1398bf20">
+    <command xml:space="preserve">open chest</command>
+    <result xml:space="preserve">It isn&apos;t something you can open.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13ae54a0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13ae54a0">
+    <command xml:space="preserve">go to cave</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13ae5920"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13ae5920">
+    <command xml:space="preserve">pick up shovel</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13ae5da0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13ae5da0">
+    <command xml:space="preserve">open chest with shovel</command>
+    <result xml:space="preserve">That doesn&apos;t seem to be something you can unlock.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b16300"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b16300">
+    <command xml:space="preserve">go to cave with shovel</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b16780"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b16780">
+    <command xml:space="preserve">go to cavern entrance</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b16c00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b16c00">
+    <command xml:space="preserve">go to cavern entrance with shovel </command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b81120"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b81120">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening the Cave Entrance)
+It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b815a0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b815a0">
+    <command xml:space="preserve">use shovel</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b81a20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b81a20">
+    <command xml:space="preserve">unlock with shovel</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13b81ea0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13b81ea0">
+    <command xml:space="preserve">unlock cavern entrance</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13bc1460"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13bc1460">
+    <command xml:space="preserve">open Cavern Entrance with shovel</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13bc18e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13bc18e0">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening the Cave Entrance)
+It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13bc1d60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13bc1d60">
+    <command xml:space="preserve">open Cave Entrance</command>
+    <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13c34290"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13c34290">
+    <command xml:space="preserve">unlock Cave Entrance</command>
+    <result xml:space="preserve">(with the shovel)
+You unlock the Cave Entrance.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x5b5d13c34890"/>
+    </children>
+  </item>
+  <item nodeId="node-0x5b5d13c34890">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening the Cave Entrance)
+
+Caverns
+You can see a Cave Entrance here.
+
+You enter the caverns and swim deeper into the depths of the cave. Something compels you to explore further. After a brief swim you enter a new chamber, within the chamber a light illuminates a glowing stash of gems! You take the gems back to shore, now hoping for someone to come by to rescue you. Maybe then your gems will come to be of value!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
